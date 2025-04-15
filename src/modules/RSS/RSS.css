@@ -1,0 +1,296 @@
+/* Feed Container Styles */
+.feed-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.feeds-sidebar {
+    width: 250px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feed-example {
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+        color: red;
+        text-decoration: none;
+    }
+}
+
+.feed-examples {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.add-feed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.feed-content {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.news-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.news-item h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.feed-input {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.feed-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.error-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff3f3;
+    border: 1px solid #ffcccc;
+    border-radius: 8px;
+    color: #cc0000;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #666;
+}
+
+.no-feed {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.feeds-container {
+}
+
+.list-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+
+    h3 {
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.list-item.active {
+    color: red;
+}
+
+.remove-feed {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    color: red;
+}
+
+.edit-title {
+    cursor: pointer;
+    color: #1890ff;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.edit-feed-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.edit-feed-input {
+    flex: 1;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.save-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.article-list {
+    margin-left: 30px;
+}
+
+.article-title {
+    margin: 0;
+}
+.article-header {
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .add-feed-header {
+        flex-wrap: wrap;
+    }
+
+    .articles-list {
+        padding: 0;
+    }
+
+    .feeds-sidebar {
+        width: 100%;
+    }
+
+    .news-items {
+        grid-template-columns: 1fr;
+    }
+
+    #root > main {
+        padding: 2rem;
+    }
+}
+
+.article-modal-content {
+    padding: 20px;
+}
+
+.article-modal-content .article-meta {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.article-modal-content .article-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.article-modal-content .article-link {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.article-modal-content .article-link a {
+    color: #1890ff;
+    text-decoration: none;
+}
+
+.article-modal-content .article-link a:hover {
+    text-decoration: underline;
+}
+
+.article-title {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.article-title:hover {
+    color: red;
+}
+
+.article-modal-content .article-image {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.article-modal-content .article-image img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-section {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-section .ant-input-affix-wrapper {
+    flex: 1;
+}
+
+.search-section .ant-btn {
+    padding: 4px 8px;
+    height: 32px;
+}
+
+.ant-notification-notice-message {
+    margin-bottom: 0 !important;
+}
