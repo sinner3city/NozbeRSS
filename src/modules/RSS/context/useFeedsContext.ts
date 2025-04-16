@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react"
-import { FeedsContextType } from "../RSS.types"
+import { RSSContextType } from "@/modules/RSS/RSS.types"
 
-export const FeedsContext = createContext<FeedsContextType | null>(null)
+export const FeedsContext = createContext<RSSContextType | null>(null)
 
 export function useFeedsContext() {
     const context = useContext(FeedsContext)

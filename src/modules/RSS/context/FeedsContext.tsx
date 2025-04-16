@@ -1,5 +1,5 @@
 import { useState, ReactNode, useEffect } from "react"
-import { Feed, FeedArticle, FeedSettings, Filter } from "../RSS.types"
+import { Feed, FeedArticle, FeedSettings, Filter } from "@/modules/RSS/RSS.types"
 import { FeedsContext } from "./useFeedsContext"
 
 export const FEEDS_STORAGE_KEY = "nozbe_rss_feeds"
